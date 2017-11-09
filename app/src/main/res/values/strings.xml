@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TaskApp</string>
+    <string name="distance">%.2f km</string>
+
+    <string name="location_not_enabled">Device Location is not enabled, Let your device turn on location.</string>
+    <string name="open_location_settings">Location Settings</string>
+    <string name="location_permission_denied">Location permission is required to find us.</string>
+    <string name="location_not_found">Unable to get current location.</string>
+    <string name="shops">Shops</string>
+    <string name="wifi_uae">WiFi UAE</string>
+    <string name="payment_machines">Payment Machines</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="error_common">Something Wrong!, Try again later.</string>
+    <string name="error_no_items">Nothing found. Try again later.</string>
+
+</resources>

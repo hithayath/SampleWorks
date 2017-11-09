@@ -94,9 +94,3 @@ Unit Test:
 	
 Note : 
 1. Data caching for offline is not handled, but can be achieved using Realm in existing data model.
-
-
-Demo:
-=====
-
-![demo](https://user-images.githubusercontent.com/13219351/32593234-9826912a-c540-11e7-8d13-de76597b5169.gif)

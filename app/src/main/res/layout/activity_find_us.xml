@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.du.taskapp.ui.FindUsActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btn_shops"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/find_button_states"
+            android:text="@string/shops"
+            android:textAllCaps="false"
+            android:onClick="onBtnShopClicked"/>
+
+        <Button
+            android:id="@+id/btn_wifi_uae"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/find_button_states"
+            android:text="@string/wifi_uae"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/btn_pay_machines"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="@drawable/find_button_states"
+            android:text="@string/payment_machines"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginTop="5dp"/>
+
+    <include layout="@layout/progress_simple"
+        android:id="@+id/loadingView"/>
+
+</RelativeLayout>

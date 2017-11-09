@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.du.taskapp"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.appcompatVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.recyclerviewVersion"
+    implementation "com.android.support:design:$rootProject.ext.designVersion"
+
+    // ButterKnife
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterKnifeVersion"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    //Otto
+    implementation "com.squareup:otto:$rootProject.ext.ottoVersion"
+
+    //Location library
+    implementation "com.google.android.gms:play-services-maps:$rootProject.ext.playServiceVersion"
+    implementation ("io.nlopez.smartlocation:library:$rootProject.ext.smartLocationVersion") {
+        transitive = false
+    }
+
+    // retrofit, gson
+    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
+
+    //Unit testing
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.ext.androidTestVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.expressoVersion"
+}
