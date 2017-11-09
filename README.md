@@ -25,7 +25,7 @@ Project Structure:
 
 Design pattern : MVP
 
-Base package : com.du.taskApp
+Base package : com.du.taskapp
 
 Depends on the functionaly, components are categorized as sub-packages as below:
 
